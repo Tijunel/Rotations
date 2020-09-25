@@ -5,7 +5,27 @@ Color Scheme:
     Yellow: #FAE373
     Green:  #5DF597
 Generated using Adobe Color Wheel: https://color.adobe.com/create/color-wheel
+
+Not gonna lie, I was to lazy to put a lot of the in-line CSS into this file. Sorry!
 */
+
+/* To avoid doing a mobile version */
+
+.desktop {
+    display: none;
+}
+.mobile {
+    display: contents;
+}
+
+@media only screen and (min-width: 1350px) { /* What... for some reason 1980px = 1350px? */
+    .desktop {
+        display: initial;
+    }
+    .mobile {
+        display: none;
+    }
+}
 
 /* Defualt HTML Tags*/
 
@@ -13,6 +33,7 @@ html, body {
     font-family: Arial, Helvetica, sans-serif;
     color: #404040;
     height: 100%;
+    width: 100%;
 }
 
 h1 {
@@ -24,62 +45,50 @@ h1 {
     font-size: 3rem;
 }
 
-#nav .row:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-#nav .column {
-    float: left;
-    width: 25%;
-}
-
 table {
     border-collapse: collapse;
     width: 90% !important;
     margin: auto;
- }
+}
  
- td {
-     border: 1px solid #B0B0B0;
-     width: 20%;
-     position: relative;
-     text-align: center;
- }
+td {
+    border: 1px solid #B0B0B0;
+    width: 20%;
+    position: relative;
+    text-align: center;
+}
  
- td:before {
-     margin-top: 35%;
-     display: block;
-     content: '';
- }
+td:before {
+    margin-top: 35%;
+    display: block;
+    content: '';
+}
  
- td:after {
-     margin-top: 35%;
-     display: block;
-     content: '';
- }
+td:after {
+    margin-top: 35%;
+    display: block;
+    content: '';
+}
  
- th {
-     border: 1px solid #fff;
-     color: #fff;
-     width: 20%;
-     position: relative;
-     background-color: #b0b0b0;
-     font-style: normal !important;
- }
+th {
+    border: 1px solid #fff;
+    color: #fff;
+    width: 20%;
+    position: relative;
+    background-color: #b0b0b0;
+}
  
- th:before {
-     margin-top: 35%;
-     display: block;
-     content: '';
- }
+th:before {
+    margin-top: 35%;
+    content: '';
+    display: block;
+}
  
- th:after {
-     margin-top: 35%;
-     display: block;
-     content: '';
- }
+th:after {
+    margin-top: 35%;
+    content: '';
+    display: block;
+}
 
 /* Custom Tags */
 #top {
@@ -101,6 +110,17 @@ table {
 
 #nav a {
     text-decoration: none;
+}
+
+#nav .row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+#nav .column {
+    float: left;
+    width: 25%;
 }
 
 #navButton {
@@ -153,7 +173,7 @@ table {
 }
 
 img {
-    border-radius: 10px;
+    border-radius: 10px !important;
 }
 
 /* Introduction Page */

@@ -3,67 +3,113 @@
 <html>
 
 <head>
+    <title>Applications</title>
     <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 
 <body>
-    <!-- Top Bar -->
-    <div id="topbar">
-        <div id="top">
-            <h1>Rotations In Video Games</h1>
-        </div>
-        <div id="nav">
-            <div class="row">
-                <div class="column">
-                    <a href="intro.html">
-                        <div id="navButton" style="background-color:#F5888240">
-                            <b>Introduction</b>
-                        </div>
-                    </a>
-                </div>
-                <div class="column">
-                    <a href="quat.html">
-                        <div id="navButton" style="background-color:#69D4F540">
-                            <b>Quaternions</b>
-                        </div>
-                    </a>
-                </div>
-                <div class="column">
-                    <a href="vector.html">
-                        <div id="navButton" style="background-color:#B466E140">
-                            <b>Vectors</b>
-                        </div>
-                    </a>
-                </div>
-                <div class="column">
-                    <a href="app.html">
-                        <div id="navButton" style="background-color:#5DF597FF">
-                            <b>Applications</b>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </div>
+    <div class="mobile" style="font-size: 5rem;">
+        Too lazy to do mobile version.
     </div>
-    <!-- End Top Bar -->
-    <!-- Page Content -->
-    <div id="content">
-        <div class="flex-container" id="app-flex">
-            <div id="mediumbox"></div>
-            <div id="mediumbox"></div>
-            <div id="widebox">
+    <div class="desktop">
+        <!-- Top Bar -->
+        <div id="topbar">
+            <div id="top">
+                <h1>Rotations and Applications</h1>
+            </div>
+            <div id="nav">
                 <div class="row">
                     <div class="column">
-                        <h2 style="color:red">What is a rotation?</h2>
+                        <a href="intro.html">
+                            <div id="navButton" style="background-color:#F5888240">
+                                <b>Introduction</b>
+                            </div>
+                        </a>
                     </div>
-                </div>
-                <div class="row">
                     <div class="column">
-                        <text>What is a rotation?</text>
+                        <a href="quat.html">
+                            <div id="navButton" style="background-color:#69D4F540">
+                                <b>Quaternions</b>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="column">
+                        <a href="vector.html">
+                            <div id="navButton" style="background-color:#B466E140">
+                                <b>Vectors</b>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="column">
+                        <a href="app.html">
+                            <div id="navButton" style="background-color:#5DF597FF">
+                                <b>Applications</b>
+                            </div>
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
+        <!-- End Top Bar -->
+        <!-- Start Content -->
+        <div id="content">
+            <div class="flex-container" id="app-flex">
+                <div id="mediumbox">
+                    <h2 style="text-align:left; font-size: 2vw; padding-left: 20px;">Lights!</h2>
+                    <p style="text-align: left; font-size: 1.5vw; padding: 20px">
+                        Well, kind of...
+                    <p style="text-align: left; font-size: 1.5vw; padding: 20px">
+                        Some of Maxwell's equations for light have a simplified form using quaternions, but he chose to
+                        keep them
+                        out of the official equations because he has "endeavoured to avoid any process demanding of the
+                        reader
+                        a knowledge of the Calculus of Quaternions".
+                    <p style="text-align: left; font-size: 1.5vw; padding: 20px">
+                        Quaternions are also used in the world of quantum mechanics to describe spin and other phenomena
+                        of
+                        quantum particles. It turns out that the imaginary components of the quaternion have very real
+                        consequences
+                        in the physics of our universe! In general, the universe <del>likes</del> <ins>LOVES</ins> to
+                        make it as difficult as possible to understand it.
+                    </p>
+                </div>
+                <div id="mediumbox">
+                    <h2 style="text-align:left; font-size: 2vw; padding-left: 20px;">Camera!</h2>
+                    <p style="text-align: left; font-size: 1.5vw; padding: 20px">
+                        In the real world, computer stabilized cameras utilize quaternions to physically stabilize the camera, 
+                        and smooth the motion of the video with post-processing effects. Another unique feature of quaternions is 
+                        SLERP (Spherical Linear Interpolation) which enables smoothened rotational motion in videogames and motion capture. 
+                    <p style="text-align: left; font-size: 1.5vw; padding: 20px">
+                        In the game world, "cameras" are used to track the character you are playing with. Quaternions are used to
+                        smoothly rotate the camera around the player without concerns of gimbal lock or otherwise. 
+                        </p>
+                        <div style="text-align:center;">
+                            <img style="width:40%; margin:auto;" src="https://docs.unity3d.com/2018.3/Documentation/uploads/Main/GateFitV_600x900_16mm.png"/>
+                        </div>
+                </div>
+                <div id="widebox">
+                    <div class="row">
+                        <div class="column">
+                            <img style="padding: 20px; width:97%;margin-top: 20px;"
+                                src="https://cdn.tutsplus.com/cg/uploads/legacy/424_Blender_Rigging_LP_Characters/Preview.jpg" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="column">
+                            <h2 style="text-align:left; font-size: 2vw; padding-left: 20px;">Action!</h2>
+                            <p style="text-align: left; font-size: 1.5vw; padding: 20px">
+                                The small components in the image are called armatures. Armatures are used to animate
+                                movement in CGI, video games, and more. Each armature utilizes quaternions to rotate and
+                                translate the position of other armatures. 
+                            <p style="text-align: left; font-size: 1.5vw; padding: 20px">
+                                Clearly, a bunch of quaternions can result in some astounding results!
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Content -->
     </div>
 </body>
 

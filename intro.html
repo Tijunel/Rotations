@@ -5,145 +5,163 @@
 <head>
     <title>Introduction</title>
     <link rel="stylesheet" href="style.css">
-    <meta name="description" content="Introduction to Rotations">
-    <meta name="author" content="Justinas Tijunelis">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 
 <body>
-    <!-- Top Bar -->
-    <div id="topbar">
-        <div id="top">
-            <h1>Rotations In Video Games</h1>
-        </div>
-        <div id="nav">
-            <div class="row">
-                <div class="column">
-                    <a href="intro.html">
-                        <div id="navButton" style="background-color:#F58882FF">
-                            <b>Introduction</b>
-                        </div>
-                    </a>
-                </div>
-                <div class="column">
-                    <a href="quat.html">
-                        <div id="navButton" style="background-color:#69D4F540">
-                            <b>Quaternions</b>
-                        </div>
-                    </a>
-                </div>
-                <div class="column">
-                    <a href="vector.html">
-                        <div id="navButton" style="background-color:#B466E140">
-                            <b>Vectors</b>
-                        </div>
-                    </a>
-                </div>
-                <div class="column">
-                    <a href="app.html">
-                        <div id="navButton" style="background-color:#5DF59740">
-                            <b>Applications</b>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </div>
+    <div class="mobile" style="font-size: 5rem;">
+        Too lazy to do mobile version.
     </div>
-    <!-- End Top Bar -->
-    <div id="content">
-        <div class="flex-container" id="intro-flex">
-            <div id="widebox">
+    <div class="desktop">
+        <!-- Top Bar -->
+        <div id="topbar">
+            <div id="top">
+                <h1>Rotations and Applications</h1>
+            </div>
+            <div id="nav">
                 <div class="row">
                     <div class="column">
-                        <h2 style="text-align:left; font-size: 2vw; padding-left: 20px;">
-                            What is a rotation?
-                        </h2>
-                        <p style="text-align: left; font-size: 1.5vw; padding: 20px">
-                            The mathematical definition for a rotation is:
-                        <p style="text-align: left; font-size: 1.5vw; padding: 20px; font-style: italic;">
-                            "Rotation in mathematics is a concept originating in geometry. Any rotation is a
-                            motion of a certain space that preserves at least one point." - Wikipedia
-                        <p style="text-align: left; font-size: 1.5vw; padding: 20px">
-                            3D rotations are generally represented in one of three ways:
-                        <ul style="font-size: 1.5vw; padding-left: 80px;" type="circle">
-                            <li>Euler Vectors</li>
-                            <li>Matrices</li>
-                            <li>Quaternions</li>
-                        </ul>
-                        <p style="text-align: left; font-size: 1.5vw; padding: 20px">
-                            Each of these have their benefits and drawbacks, but the quaternion
-                            is the gold standard when it comes to video games.
-                        <p style="text-align: left; font-size: 1.5vw; padding: 20px">
-                            To avoid unexpected behaviour, we need four dimensions to describe three dimensional
-                            rotation. The quaternion does just that, and is visualized on the right. 
+                        <a href="intro.html">
+                            <div id="navButton" style="background-color:#F58882FF">
+                                <b>Introduction</b>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="column">
+                        <a href="quat.html">
+                            <div id="navButton" style="background-color:#69D4F540">
+                                <b>Quaternions</b>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="column">
+                        <a href="vector.html">
+                            <div id="navButton" style="background-color:#B466E140">
+                                <b>Vectors</b>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="column">
+                        <a href="app.html">
+                            <div id="navButton" style="background-color:#5DF59740">
+                                <b>Applications</b>
+                            </div>
+                        </a>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="column">
-                        <div style="padding:20px;">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/Cayley_Q8_quaternion_multiplication_graph.svg" />
+            </div>
+        </div>
+        <!-- End Top Bar -->
+        <!-- Start Content -->
+        <div id="content">
+            <div class="flex-container" id="intro-flex">
+                <div id="widebox">
+                    <div class="row">
+                        <div class="column">
+                            <h2 style="text-align:left; font-size: 2vw; padding-left: 20px;">
+                                What is a rotation?
+                            </h2>
+                            <p style="text-align: left; font-size: 1.5vw; padding: 20px">
+                                The mathematical definition for a rotation is:
+                            <p style="text-align: left; font-size: 1.5vw; padding: 20px; font-style: italic;">
+                                "Rotation in mathematics is a concept originating in geometry. Any rotation is a
+                                motion of a certain space that preserves at least one point." - Wikipedia
+                            <p style="text-align: left; font-size: 1.5vw; padding: 20px">
+                                3D rotations are generally represented in one of three ways:
+                            <ul style="font-size: 1.5vw; padding-left: 80px;" type="circle">
+                                <li>Euler Vectors</li>
+                                <li>Matrices</li>
+                                <li>Quaternions</li>
+                            </ul>
+                            <p style="text-align: left; font-size: 1.5vw; padding: 20px">
+                                Each of these have their benefits and drawbacks, but the quaternion
+                                is the gold standard when it comes to video games.
+                            <p style="text-align: left; font-size: 1.5vw; padding: 20px">
+                                To avoid unexpected behaviour, we need four dimensions to describe three dimensional
+                                rotation. The quaternion does just that, and is visualized on the right.
                         </div>
                     </div>
-                </div>
-            </div>
-            <div id="flex-break"></div>
-            <div id="mediumbox">
-                <h2 style="text-align:left; font-size: 2vw; padding-left: 20px;">Leonhard Euler</h2>
-                <p style="text-align: left; font-size: 1.5vw; padding: 20px">
-                    Euler is a famous mathematician who dipped his hand in the theory of rotation. Two of his major
-                    discoveries include the Euler vector and Euler Angles.
-                <p style="text-align: left; font-size: 1.5vw; padding: 20px">
-                    Euler noticed that the order in which we apply rotations matters, and therefore devised Euler angles
-                    to describe the yaw, pitch, and roll (The rotations must be applied in that order). Although, this
-                    form
-                    has issues as it may result in <a
-                        href="https://en.wikipedia.org/wiki/Gimbal_lock#:~:text=Gimbal%20lock%20is%20the%20loss,misleading%3A%20no%20gimbal%20is%20restrained.">Gimbal
-                        Lock</a>.
-                    The Euler Vector fixed these issues, but were not practical to use.
-                <div style="margin: auto; padding:0px; text-align: center;">
-                    <img style="width: 70%" src="https://allin.guide/wp-content/uploads/2019/06/euler.jpg" />
-                </div>
-            </div>
-            <div id="mediumbox">
-                <h2 style="text-align:left; font-size: 2vw; padding-left: 20px;">Sir William Rowan Hamilton</h2>
-                <p style="text-align: left; font-size: 1.5vw; padding: 20px">
-                    Hamilton is a famous mathematician and physicist that discovered the quaternion (and many other
-                    things). Many mathematicians called quaternions "evil" for their unintuitive properties. However, 
-                    the quaternion become the modern standard for expressing mathematical rotations. 
-                <p style="text-align: left; font-size: 1.5vw; padding: 20px">
-                    Today, quaternions are used for any computational calculations involving rotations. 
-                <div style="margin: auto; padding:0px; text-align: center;">
-                    <img style="width: 70%" src="https://www.ria.ie/sites/default/files/styles/content_image/public/hamilton-880x440.png?itok=uFLBdDMb" />
-                </div>
-            </div>
-            <div id="widebox">
-                <div class="row">
                     <div class="row">
                         <div class="column">
                             <div style="padding:20px;">
-                                <img style="width:100%;"
-                                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Apollo_Inertial_Measurement_Unit.png/440px-Apollo_Inertial_Measurement_Unit.png" />
+                                <img
+                                    src="https://upload.wikimedia.org/wikipedia/commons/0/04/Cayley_Q8_quaternion_multiplication_graph.svg" />
                             </div>
                         </div>
                     </div>
-                    <div class="column">
-                        <h2 style="text-align:left; font-size: 2vw; padding-left: 20px;">Who cares?</h2>
-                        <p style="text-align: left; font-size: 1.5vw; padding: 20px">
-                        Many modern devices use 9-DoF (Acceleration, Gyroscope, Magnetometer) IMUs (Inertial Measurement Units) to 
-                        compute orientation. This allows us to play motion games, use our phone as a level or compass, and so much more. 
-                        These IMUs output quaternions that enable us to program video games and more without any worries. Even effects like
-                        parallax utilize quaternions. 
-                        <p style="text-align: left; font-size: 1.5vw; padding: 20px">
-                        However, there was a time when IMUs used <a>gimbals</a> to compute orientation. This led to problems as IMUs would
-                        suffer from Gimbal Lock. The Apollo 13 mission once suffered from Gimbal Lock, which left astronauts in the dark about
-                        their orientation, and forced them to manually correct their rotation. Clearly, rotation is very important to the safety 
-                        of aircrafts and other vehicles. 
-                        <p style="text-align: left; font-size: 1.5vw; padding: 20px">
-                        Properly understanding the mathematics of rotation can save you many headaches if you work in the gaming, or aircraft industries. 
-                        More importantly, it could save many lives. 
+                </div>
+                <div id="flex-break"></div>
+                <div id="mediumbox">
+                    <h2 style="text-align:left; font-size: 2vw; padding-left: 20px;">Leonhard Euler</h2>
+                    <p style="text-align: left; font-size: 1.5vw; padding: 20px">
+                        Euler is a famous mathematician who dipped his hand in the theory of rotation. Two of his major
+                        discoveries include the Euler vector and Euler Angles.
+                    <p style="text-align: left; font-size: 1.5vw; padding: 20px">
+                        Euler noticed that the order in which we apply rotations matters, and therefore devised Euler
+                        angles
+                        to describe the yaw, pitch, and roll (The rotations must be applied in that order). Although,
+                        this
+                        form
+                        has issues as it may result in <a
+                            href="https://en.wikipedia.org/wiki/Gimbal_lock#:~:text=Gimbal%20lock%20is%20the%20loss,misleading%3A%20no%20gimbal%20is%20restrained.">Gimbal
+                            Lock</a>.
+                        The Euler Vector fixed these issues, but were not practical to use.
+                    <div style="margin: auto; padding:0px; text-align: center;">
+                        <img style="width: 70%" src="https://allin.guide/wp-content/uploads/2019/06/euler.jpg" />
+                    </div>
+                </div>
+                <div id="mediumbox">
+                    <h2 style="text-align:left; font-size: 2vw; padding-left: 20px;">Sir William Rowan Hamilton</h2>
+                    <p style="text-align: left; font-size: 1.5vw; padding: 20px">
+                        Hamilton is a famous mathematician and physicist that discovered the quaternion (and many other
+                        things). Many mathematicians called quaternions "evil" for their unintuitive properties.
+                        However,
+                        the quaternion become the modern standard for expressing mathematical rotations.
+                    <p style="text-align: left; font-size: 1.5vw; padding: 20px">
+                        Today, quaternions are used for any computational calculations involving rotations.
+                    <div style="margin: auto; padding:0px; text-align: center;">
+                        <img style="width: 70%"
+                            src="https://www.ria.ie/sites/default/files/styles/content_image/public/hamilton-880x440.png?itok=uFLBdDMb" />
+                    </div>
+                </div>
+                <div id="widebox">
+                    <div class="row">
+                        <div class="row">
+                            <div class="column">
+                                <div style="padding:20px;">
+                                    <img style="width:100%;"
+                                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Apollo_Inertial_Measurement_Unit.png/440px-Apollo_Inertial_Measurement_Unit.png" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <h2 style="text-align:left; font-size: 2vw; padding-left: 20px;">Who cares?</h2>
+                            <p style="text-align: left; font-size: 1.5vw; padding: 20px">
+                                Many modern devices use 9-DoF (Acceleration, Gyroscope, Magnetometer) IMUs (Inertial
+                                Measurement Units) to
+                                compute orientation. This allows us to play motion games, use our phone as a level or
+                                compass, and so much more.
+                                These IMUs output quaternions that enable us to program video games and more without any
+                                worries. Even effects like
+                                parallax utilize quaternions.
+                            <p style="text-align: left; font-size: 1.5vw; padding: 20px">
+                                However, there was a time when IMUs used <a>gimbals</a> to compute orientation. This led
+                                to problems as IMUs would
+                                suffer from Gimbal Lock. The Apollo 13 mission once suffered from Gimbal Lock, which
+                                left astronauts in the dark about
+                                their orientation, and forced them to manually correct their rotation. Clearly, rotation
+                                is very important to the safety
+                                of aircrafts and other vehicles.
+                            <p style="text-align: left; font-size: 1.5vw; padding: 20px">
+                                Properly understanding the mathematics of rotation can save you many headaches if you
+                                work in the gaming, or aircraft industries.
+                                More importantly, it could save many lives.
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+        <!-- End Content -->
     </div>
 </body>
 

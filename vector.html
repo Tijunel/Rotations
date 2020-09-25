@@ -3,70 +3,139 @@
 <html>
 
 <head>
+    <title>Vectors</title>
     <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 
 <body>
-    <!-- Top Bar -->
-    <div id="topbar">
-        <div id="top">
-            <h1>Rotations In Video Games</h1>
-        </div>
-        <div id="nav">
-            <div class="row">
-                <div class="column">
-                    <a href="intro.html">
-                        <div id="navButton" style="background-color:#F5888240">
-                            <b>Introduction</b>
-                        </div>
-                    </a>
-                </div>
-                <div class="column">
-                    <a href="quat.html">
-                        <div id="navButton" style="background-color:#69D4F540">
-                            <b>Quaternions</b>
-                        </div>
-                    </a>
-                </div>
-                <div class="column">
-                    <a href="vector.html">
-                        <div id="navButton" style="background-color:#B466E1FF">
-                            <b>Vectors</b>
-                        </div>
-                    </a>
-                </div>
-                <div class="column">
-                    <a href="app.html">
-                        <div id="navButton" style="background-color:#5DF59740">
-                            <b>Applications</b>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </div>
+    <div class="mobile" style="font-size: 5rem;">
+        Too lazy to do mobile version.
     </div>
-    <!-- End Top Bar -->
-    <div id="content">
-        <div class="flex-container" id="vector-flex">
-            <div id="mediumbox">
-                <h2 style="text-align:left; font-size: 2vw; padding-left: 20px;">What is a vector?</h2>
+    <div class="desktop">
+        <!-- Top Bar -->
+        <div id="topbar">
+            <div id="top">
+                <h1>Rotations and Applications</h1>
             </div>
-            <div id="mediumbox">
-                <h2 style="text-align:left; font-size: 2vw; padding-left: 20px;">Vectors and quaternions</h2>
-            </div>
-            <div id="widebox">
+            <div id="nav">
                 <div class="row">
                     <div class="column">
-                        <text style="text-align:center">What is a rotation?</text>
+                        <a href="intro.html">
+                            <div id="navButton" style="background-color:#F5888240">
+                                <b>Introduction</b>
+                            </div>
+                        </a>
                     </div>
-                </div>
-                <div class="row">
                     <div class="column">
-                        <text>What is a rotation?</text>
+                        <a href="quat.html">
+                            <div id="navButton" style="background-color:#69D4F540">
+                                <b>Quaternions</b>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="column">
+                        <a href="vector.html">
+                            <div id="navButton" style="background-color:#B466E1FF">
+                                <b>Vectors</b>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="column">
+                        <a href="app.html">
+                            <div id="navButton" style="background-color:#5DF59740">
+                                <b>Applications</b>
+                            </div>
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
+        <!-- End Top Bar -->
+        <!-- Start Content -->
+        <div id="content">
+            <div class="flex-container" id="vector-flex">
+                <div id="mediumbox">
+                    <h2 style="text-align:left; font-size: 2vw; padding-left: 20px;">What is a vector?</h2>
+                    <p style="text-align: left; font-size: 1.5vw; padding: 20px">
+                        A vector is an object that has both a magnitude and a direction. In 3D, a vector can be
+                        represented by 3 values (x, y, z) coming from the origin. In general:
+                    <p style="text-align: left; font-size: 1.5vw; padding: 20px; font-family:Cambria;">
+                        <i>v</i> = (<i>x, y, z</i>)
+                    <p style="text-align: left; font-size: 1.5vw; padding: 20px">
+                        A vector alone is not sufficient for representing rotation, however, it can tell us what the
+                        upward, forward, and left/right directions are for an object. As Euler discovered, rotation
+                        can be described if we add an additional dimension, the "spin" of an object along it's upward
+                        direction:
+                    <p style="text-align: left; font-size: 1.5vw; padding: 20px; font-family:Cambria;">
+                        <i>e</i> = (<i>&theta;</i>, <i>v</i>); where <i>v = (x, y, z)</i> is a vector in real space
+                    <p style="text-align: left; font-size: 1.5vw; padding: 20px">
+                        While one vector cannot describe an object's rotational state, it can describe a rotational
+                        transform! If we have two vectors, we can describe the rotation from one to the other with
+                        a quaternion. By the same logic, we can rotate a vector with a quaternion.
+                </div>
+                <div id="mediumbox">
+                    <h2 style="text-align:left; font-size: 2vw; padding-left: 20px;">Vectors and quaternions</h2>
+                    <p style="text-align: left; font-size: 1.5vw; padding: 20px">
+                        As described, two vectors can describe a from-to rotation with a quaternion. Also, a vector
+                        can be rotated by a quaternion. However, the methods for doing so are not intuitive.
+                    <p style="text-align: left; font-size: 1.5vw; padding: 20px">
+                        Rotating a vector by a quaternion <em>must</em> be done as follows:
+                    <p style="text-align: left; font-size: 1.5vw; padding: 20px; font-family:Cambria;">
+                        <i>v'</i> = <i>q<sub>A</sub></i> &times; <i>v</i> &times; <i>q<sub>A</sub><sup>*</sup></i> =
+                        <i>q<sub>A</sub></i> &times; (<i>v</i> &times; <i>q<sub>A</sub><sup>*</sup></i>)
+                    <p style="text-align: left; font-size: 1.5vw; padding: 20px">
+                        Applying another rotation can be done as follows:
+                    <p style="text-align: left; font-size: 1.5vw; padding: 20px; font-family:Cambria;">
+                        <i>v'</i> = <i>q<sub>B</sub></i> &times; (<i>q<sub>A</sub></i> &times; <i>v</i> &times;
+                        <i>q<sub>A</sub><sup>*</sup></i>) &times; <i>q<sub>B</sub><sup>*</sup></i>
+                        = <i>q<sub>B</sub></i> &times; ((<i>q<sub>A</sub></i> &times; <i>v</i> &times;
+                        <i>q<sub>A</sub><sup>*</sup></i>) &times; <i>q<sub>B</sub><sup>*</sup></i>) <br><br>
+                        = (<i>q<sub>B</sub></i> &times; <i>q<sub>A</sub></i>) &times; <i>v</i> &times;
+                        (<i>q<sub>A</sub><sup>*</sup></i> &times; <i>q<sub>B</sub><sup>*</sup></i>) =
+                        (<i>q<sub>B</sub></i> &times; <i>q<sub>A</sub></i>) &times; <i>v</i> &times;
+                        (<i>q<sub>B</sub></i> &times; <i>q<sub>A</sub></i>)<sup>*</sup>
+                    <p style="text-align: left; font-size: 1.5vw; padding: 20px">
+                        Computing a quaternion from two vectors is another beast entirely. Thankfully, this
+                        functionality is built into most game engines
+                        and softwares where you would use it.
+                </div>
+                <div id="widebox">
+                    <div class="row">
+                        <div class="column">
+                            <h2 style="text-align:left; font-size: 2vw; padding-left: 20px;">Can vector math be applied
+                                to quaternions?</h2>
+                            <p style="text-align: left; font-size: 1.5vw; padding: 20px">
+                                The cross product is a mathematical operation on two vectors, A and B, which produces a
+                                third vector C which is perpendicular to both A and B. This can also be applied to
+                                quaternions. The
+                                cross product of the i, j, k components of two quaternions produces the i, j, k
+                                components of the
+                                multiplication of those two quaternions.
+                            <p style="text-align: left; font-size: 1.5vw; padding: 20px">
+                                The dot product is a mathematical operation on two vectors, A and B, which produces a
+                                scalar value
+                                which tells you "by what amount" A goes in the direction of B. The dot product of the i,
+                                j, k components
+                                of two quaternions produces the real component of the resulting quaterion, w.
+                            <p style="text-align: left; font-size: 1.5vw; padding: 20px">
+                                As it turns out, we can multiply quaternions with a real component of zero using the dot
+                                and cross products:
+                            <p style="text-align: left; font-size: 1.5vw; padding: 20px; font-family:Cambria;">
+                                <i>Let a and b be quaternions where a = (0, v) and b = (0, w)</i>;<br><br>
+                                <i>a</i> &times; <i>b</i> = (<i>-v</i> &middot; <i>w</i>, <i>v</i> &times; <i>w</i>)
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="column">
+                            <img style="width: 100%"
+                                src="https://i2.wp.com/www.chrisevans3d.com/pub_blog/wp-content/uploads/2014/05/vector_wikipedia.png?w=555" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Content -->
     </div>
 </body>
 
