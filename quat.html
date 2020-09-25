@@ -46,24 +46,112 @@
         </div>
     </div>
     <!-- End Top Bar -->
-    <div class="flex-container" id="quat-flex">
-        <div id="mediumbox"></div>
-        <div id="mediumbox"></div>
-        <div id="widebox">
-            <div class="row">
-                <div class="column">
-                    <text style="text-align:center">What is a rotation?</text>
-                </div>
+    <div id="content">
+        <div class="flex-container" id="quat-flex">
+            <div id="mediumbox">
+                <h2 style="text-align:left; font-size: 2vw; padding-left: 20px;">What is a quaternion?</h2>
+                <p style="text-align: left; font-size: 1.5vw; padding: 20px">
+                    Quaternions are a number system that extends the complex numbers. They represent rotational
+                    transforms where an object rotates about an axis by some angle.
+                <p style="text-align: left; font-size: 1.5vw; padding: 20px">
+                    Euler devised the Euler vector which took the form:
+                <p style="text-align: left; font-size: 1.5vw; padding: 20px; font-family:Cambria;">
+                    <i>e</i> = (<i>&theta;</i>, <i>v</i>); where <i>v = (x, y, z)</i> is a vector in real space
+                <p style="text-align: left; font-size: 1.5vw; padding: 20px;">
+                    the quaternion takes the form:
+                <p style="text-align: left; font-size: 1.5vw; padding: 20px; font-family:Cambria;">
+                    <i>q</i> = <i style="color:#F58882;">w</i> + <i style="color:#69D4F5;">i</i>a + <i
+                        style="color:#B466E1;">j</i>b + <i style="color:#5DF597;">k</i>c = (<i><i
+                            style="color:#F58882;">w</i>, a, b, c</i>) =
+                    (<i>cos(&theta;/2)</i>, <i>sin(&theta;/2)v</i>)
+                <p style="text-align: left; font-size: 1.5vw; padding: 20px;">
+                    i, j, k are the fundamental quaternion units defined by:
+                <p style="text-align: left; font-size: 1.5vw; padding: 20px; font-family:Cambria;">
+                    <i style="color:#69D4F5;">i</i><sup>2</sup> = <i style="color:#B466E1;">j</i><sup>2</sup> = <i
+                        style="color:#5DF597;">k</i><sup>2</sup> = <i style="color:#69D4F5;">i</i><i
+                        style="color:#B466E1;">j</i><i style="color:#5DF597;">k</i> = -1 (You can see why people called
+                    this evil...)
             </div>
-            <div class="row">
-                <div class="column">
-                    <text>What is a rotation?</text>
+            <div id="mediumbox">
+                <h2 style="text-align:left; font-size: 2vw; padding-left: 20px;">Properties of the quaternion</h2>
+                <p style="text-align: left; font-size: 1.5vw; padding: 20px">
+                    <a
+                        href="https://en.wikipedia.org/wiki/Quaternions_and_spatial_rotation#:~:text=Unit%20quaternions%2C%20also%20known%20as,tde%20problem%20of%20gimbal%20lock.">Unit
+                        quaternion</a> rotations are applied through multiplication. So, a rotation defined as
+                    <i>q<sub>A</sub></i>
+                    multiplied by <i>q<sub>B</sub></i>, applies B then A (Right to left). However, this means that
+                    quaternion
+                    multiplication is non-commutative:
+                <p style="text-align: left; font-size: 1.5vw; padding: 20px; font-family:Cambria;">
+                    <i>q<sub>A</sub></i> &times; <i>q<sub>B</sub></i> &NotEqual; <i>q<sub>B</sub></i> &times;
+                    <i>q<sub>A</sub></i>
+                <p style="text-align: left; font-size: 1.5vw; padding: 20px">
+                    the identity quaterion <i>q<sub>I</sub></i> is defined as (1, 0, 0, 0), and represents the "zero
+                    rotation", that is:
+                <p style="text-align: left; font-size: 1.5vw; padding: 20px; font-family:Cambria;">
+                    <i>q<sub>I</sub></i> &times; <i>q<sub>Any</sub></i> = <i>q<sub>Any</sub></i>
+                <p style="text-align: left; font-size: 1.5vw; padding: 20px">
+                    Every quaternion also has a conjugate or "inverse" which applies an opposite rotation. It is defined
+                    as:
+                <p style="text-align: left; font-size: 1.5vw; padding: 20px; font-family:Cambria;">
+                    <i>q<sup>*</sup></i> = <i>q<sup>-1</sup></i> = (<i><i style="color:#F58882;">-w</i>, v</i>);
+                    <i>q</i> &times; <i>q<sup>*</sup></i> = <i>q<sub>I</sub></i>
+            </div>
+            <div id="widebox">
+                <div class="row">
+                    <div class="column">
+                        <h2 style="text-align:left; font-size: 2vw; padding-left: 20px;">Visualization</h2>
+                        <div style='position:relative; padding-bottom:calc(55.63% + 44px)'><iframe src='https://gfycat.com/ifr/CreativeAbleFulmar' frameborder='0' scrolling='no' width='100%' height='100%' style='position:absolute;top:0;left:10px;'></iframe></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="column">
+                        <h2 style="text-align:left; font-size: 2vw; padding-left: 20px;">Non-commutativity table</h2>
+                        <table style="font-family:Cambria; font-size: 1.5vw;">
+                            <tbody>
+                                <tr>
+                                    <th>
+                                        <div>&times;</div>
+                                    </th>
+                                    <th>1</th>
+                                    <th>i</th>
+                                    <th>j</th>
+                                    <th>k</th>
+                                </tr>
+                                <tr>
+                                    <th>1</th>
+                                    <td>1</td>
+                                    <td>i</td>
+                                    <td>j</td>
+                                    <td>k</td>
+                                </tr>
+                                <tr>
+                                    <th>i</th>
+                                    <td>i</td>
+                                    <td>-1</td>
+                                    <td style="background-color:#5DF597; color: white;">k</td>
+                                    <td style="background-color:#B466E1; color: white;">-j</td>
+                                </tr>
+                                <tr>
+                                    <th>j</th>
+                                    <td>j</td>
+                                    <td style="background-color:#5DF597; color: white;">-k</td>
+                                    <td>-1</td>
+                                    <td style="background-color:#69D4F5; color: white;">i</td>
+                                </tr>
+                                <tr>
+                                    <th>k</th>
+                                    <td>k</td>
+                                    <td style="background-color:#B466E1; color: white;">j</td>
+                                    <td style="background-color:#69D4F5; color: white;">-i</td>
+                                    <td>-1</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
         </div>
-        <div id="flex-break"></div>
-        <div id="mediumbox"></div>
-        <div id="mediumbox"></div>
     </div>
 </body>
 

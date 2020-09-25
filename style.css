@@ -7,11 +7,12 @@ Color Scheme:
 Generated using Adobe Color Wheel: https://color.adobe.com/create/color-wheel
 */
 
-/* Defualy HTML Tags*/
+/* Defualt HTML Tags*/
 
-html {
+html, body {
     font-family: Arial, Helvetica, sans-serif;
     color: #404040;
+    height: 100%;
 }
 
 h1 {
@@ -33,6 +34,52 @@ h1 {
     float: left;
     width: 25%;
 }
+
+table {
+    border-collapse: collapse;
+    width: 90% !important;
+    margin: auto;
+ }
+ 
+ td {
+     border: 1px solid #B0B0B0;
+     width: 20%;
+     position: relative;
+     text-align: center;
+ }
+ 
+ td:before {
+     margin-top: 35%;
+     display: block;
+     content: '';
+ }
+ 
+ td:after {
+     margin-top: 35%;
+     display: block;
+     content: '';
+ }
+ 
+ th {
+     border: 1px solid #fff;
+     color: #fff;
+     width: 20%;
+     position: relative;
+     background-color: #b0b0b0;
+     font-style: normal !important;
+ }
+ 
+ th:before {
+     margin-top: 35%;
+     display: block;
+     content: '';
+ }
+ 
+ th:after {
+     margin-top: 35%;
+     display: block;
+     content: '';
+ }
 
 /* Custom Tags */
 #top {
