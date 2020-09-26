@@ -32,8 +32,6 @@ Not gonna lie, I was to lazy to put a lot of the in-line CSS into this file. Sor
 html, body {
     font-family: Arial, Helvetica, sans-serif;
     color: #404040;
-    max-width: 100%;
-    max-height: 100%;
 }
 
 h1 {
@@ -168,6 +166,7 @@ th:after {
     border-radius: 10px;
     height: calc(50vw - 48px);
     width: calc(50% - 40px);
+    min-height: 750px;
 }
 
 img {
