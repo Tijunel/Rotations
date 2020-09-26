@@ -168,8 +168,6 @@ th:after {
     border-radius: 10px;
     height: calc(50vw - 48px);
     width: calc(50% - 40px);
-    min-height: 930px;
-    min-width: 930px;
 }
 
 img {
